@@ -2,7 +2,15 @@
 function counter(value){
 
     clearDivs()
-    const numberCount = value   //numberCount > 1
+    const outcome = validator(value)
+    let numberCount
+
+    if(outcome){
+        numberCount = value
+    }
+    else{
+        numberCount = 0
+    }
 
     for(let i = 1; i <= numberCount; i++){
         //console.log(i);
@@ -30,22 +38,39 @@ function clearDivs(){
     document.getElementById("sijnict").innerHTML = ""
 }
 
+function validator(a){
+    let content = document.getElementById("validator")
+    content.innerHTML = ""
+    if(a < 3){
+        let insert = document.createElement("div")
+        let className = document.createAttribute("class")
+        className.value = "alert alert-danger"
+        let roleName = document.createAttribute("role")
+        roleName.value = "alert"
+        insert.setAttributeNode(className, roleName)
+        insert.innerHTML = "Getal moet groter zijn dan 2"
+        content.appendChild(insert)
+        return false
+    }
+    return true
+}
+
 function writeSijn(a, i){
     if(a == 0){
+        let res
+
         if(i == 69){
-            let res = i + " (͡• ͜ʖ ͡•)"
+            res = i + " (͡• ͜ʖ ͡•)"
             console.log(res)
-            let content = document.getElementById("sijn")
-            let insert = createMyElement(res)
-            content.appendChild(insert)
         }
         else{
-            let res = i + " SIJN" 
+            res = i + " SIJN" 
             console.log(res)
-            let content = document.getElementById("sijn")
-            let insert = createMyElement(res)
-            content.appendChild(insert)  
         }
+
+        let content = document.getElementById("sijn")
+        let insert = createMyElement(res)
+        content.appendChild(insert)  
     }
 }
 
