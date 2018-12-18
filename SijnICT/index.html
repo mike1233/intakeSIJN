@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SijnICT Counter</title>
+  <meta name="description" content="fun JS function">
+  <meta name="author" content="Mike">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        Mike Schepers
+      </a>
+    </nav>
+    <div class="jumbotron-fluid jumbotron text-center">
+        <div class="row text-center">
+          <div class="col-sm">
+            <h3>SijnICT Opdrachtbeschrijving:</h3>
+            <p>"Schrijf een programma dat het nummer 1 tot en met 100 laat zien. Maar laat voor iedere meervoud van drie "SIJN" zien en voor iedere meervoud van vijf "ICT". Als het getal een meervoud is van zowel vijf als drie dan laat dan "SIJNICT" zien."</p>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm">
+              <div class="form-group">
+                <label for="counterValue">Waarde Voor De Counter</label>
+                <input type="number" class="form-control" id="counterValue" placeholder="counter waarde">
+              </div>
+              <button class="btn btn-primary" onclick="counter(document.getElementById('counterValue').value)">Submit</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <h6 class="dropdown-header">Ieder meervoud van 3:</h6>
+            <ul class="list-group list-group-flush" id="sijn"> 
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6 class="dropdown-header">Ieder meervoud van 5:</h6>
+            <ul class="list-group list-group-flush" id="ict">
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6 class="dropdown-header">Ieder meervoud van beide:</h6>
+            <ul class="list-group list-group-flush" id="sijnict">
+            </ul>
+          </div>
+        </div>
+      </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</html>
