@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<body>
+<body onload="counter(100)">
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
         Mike Schepers
@@ -22,10 +22,13 @@
             <p>"Schrijf een programma dat het nummer 1 tot en met 100 laat zien. Maar laat voor iedere meervoud van drie "SIJN" zien en voor iedere meervoud van vijf "ICT". Als het getal een meervoud is van zowel vijf als drie dan laat dan "SIJNICT" zien."</p>
           </div>
         </div>
+        <div class="row">
+          <br/>
+        </div>
         <div class="row text-center">
           <div class="col-sm">
               <div class="form-group">
-                <label for="counterValue">Waarde Voor De Counter</label>
+                <label for="counterValue">Waarde Voor De Counter:</label>
                 <input type="number" class="form-control" id="counterValue" placeholder="counter waarde">
               </div>
               <button class="btn btn-primary" onclick="counter(document.getElementById('counterValue').value)">Submit</button>
